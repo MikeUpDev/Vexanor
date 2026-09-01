@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vexandor LLC | IT Staffing & Technology Talent</title>
+  <meta name="description" content="Vexandor LLC connects organizations with exceptional technology professionals across software engineering, cloud, data, cybersecurity, and IT." />
+  <style>
+    :root{
+      --ink:#0b1220;
+      --muted:#667085;
+      --navy:#0a1733;
+      --blue:#2563eb;
+      --blue2:#4f8cff;
+      --line:#e7ebf2;
+      --bg:#f7f9fc;
+      --white:#fff;
+      --radius:22px;
+      --shadow:0 18px 55px rgba(15,23,42,.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1160px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(231,235,242,.8)}
+    nav{height:78px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:21px;letter-spacing:-.5px}
+    .mark{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--blue),#173d9a);display:grid;place-items:center;color:#fff;font-size:17px;box-shadow:0 8px 20px rgba(37,99,235,.25)}
+    .links{display:flex;gap:30px;align-items:center;font-size:14px;font-weight:600;color:#475467}
+    .links a:hover{color:var(--blue)}
+    .nav-cta,.btn-primary{background:var(--blue);color:#fff;padding:12px 20px;border-radius:11px;font-weight:700;border:0;display:inline-block;box-shadow:0 9px 22px rgba(37,99,235,.22)}
+    .nav-cta:hover,.btn-primary:hover{background:#1d4ed8}
+    .menu{display:none;background:none;border:0;font-size:26px}
+    .hero{background:radial-gradient(circle at 78% 20%,rgba(79,140,255,.20),transparent 31%),linear-gradient(135deg,#071329 0%,#0d1e40 58%,#132d5f 100%);color:#fff;padding:105px 0 115px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;color:#9dbdff;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:1.4px;margin-bottom:20px}
+    .dot{width:7px;height:7px;border-radius:50%;background:#63a1ff}
+    h1{font-size:clamp(44px,6vw,72px);line-height:1.02;letter-spacing:-3.5px;max-width:720px}
+    .hero p{margin:25px 0 32px;color:#c4d0e6;font-size:18px;max-width:620px}
+    .actions{display:flex;gap:13px;flex-wrap:wrap}
+    .btn-secondary{padding:12px 20px;border:1px solid rgba(255,255,255,.24);border-radius:11px;font-weight:700;color:#fff}
+    .btn-secondary:hover{background:rgba(255,255,255,.08)}
+    .talent-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:26px;padding:28px;box-shadow:0 30px 80px rgba(0,0,0,.25)}
+    .card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+    .card-title{font-weight:800;font-size:18px}.status{font-size:12px;color:#a8ffc9;background:rgba(34,197,94,.13);padding:6px 9px;border-radius:99px}
+    .profile{display:flex;align-items:center;gap:13px;padding:16px 0;border-top:1px solid rgba(255,255,255,.10)}
+    .avatar{width:43px;height:43px;border-radius:50%;display:grid;place-items:center;background:#dbeafe;color:#1640a0;font-weight:800}
+    .profile b{display:block;font-size:14px}.profile span{font-size:12px;color:#aebbd1}
+    .tag{margin-left:auto;border:1px solid rgba(255,255,255,.12);padding:5px 8px;border-radius:8px;font-size:11px;color:#c9d5e9}
+    section{padding:92px 0}
+    .section-head{max-width:700px;margin-bottom:45px}
+    .kicker{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:var(--blue);margin-bottom:10px}
+    h2{font-size:clamp(31px,4vw,46px);line-height:1.1;letter-spacing:-1.8px}
+    .lead{color:var(--muted);font-size:17px;margin-top:14px}
+    .services{background:var(--bg)}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;transition:.25s}
+    .service:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .icon{width:48px;height:48px;border-radius:14px;background:#edf4ff;color:var(--blue);display:grid;place-items:center;font-size:21px;font-weight:800;margin-bottom:20px}
+    .service h3{font-size:19px;margin-bottom:8px}.service p{color:var(--muted);font-size:14px}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+    .check-list{list-style:none;margin-top:26px;display:grid;gap:14px}
+    .check-list li{display:flex;gap:12px;align-items:flex-start;font-weight:600}
+    .check{width:22px;height:22px;border-radius:50%;background:#eaf2ff;color:var(--blue);display:grid;place-items:center;font-size:12px;flex:none;margin-top:2px}
+    .metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .metric{background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:28px}
+    .metric strong{font-size:36px;letter-spacing:-1px;display:block}.metric span{color:var(--muted);font-size:13px}
+    .process{background:#f7f9fc}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+    .step{background:#fff;border:1px solid var(--line);border-radius:20px;padding:25px}
+    .number{font-size:12px;font-weight:800;color:var(--blue);margin-bottom:20px}
+    .step h3{font-size:17px;margin-bottom:7px}.step p{color:var(--muted);font-size:13px}
+    .cta{padding:85px 0}.cta-box{background:linear-gradient(120deg,#0a1733,#153b78);border-radius:28px;padding:55px;display:flex;align-items:center;justify-content:space-between;gap:30px;color:#fff}
+    .cta-box p{color:#c8d4e9;margin-top:10px;max-width:600px}
+    footer{background:#071329;color:#aebbd1;padding:45px 0 25px}
+    .footer-top{display:flex;justify-content:space-between;gap:40px;padding-bottom:35px}
+    .footer-brand{color:#fff}.footer-links{display:flex;gap:25px;font-size:13px}.footer-links a:hover{color:#fff}
+    .copyright{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;font-size:12px}
+    @media(max-width:850px){
+      .links{display:none}.menu{display:block}.hero-grid,.split{grid-template-columns:1fr}.hero{padding:75px 0}.service-grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.cta-box{flex-direction:column;align-items:flex-start}
+    }
+    @media(max-width:560px){
+      nav{height:68px}.hero h1{letter-spacing:-2px}.service-grid,.steps,.metrics{grid-template-columns:1fr}section{padding:70px 0}.footer-top{flex-direction:column}.footer-links{flex-wrap:wrap}.cta-box{padding:35px 25px}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <img src="logo.png" width="64" height="64"/>
+      <div class="links">
+        <a href="#services">Services</a><a href="#approach">Why Vexandor</a><a href="#process">Process</a><a href="#contact">Contact</a>
+        <a href="#contact" class="nav-cta">Hire Talent</a>
+      </div>
+      <button class="menu" aria-label="Open menu" onclick="document.querySelector('.links').classList.toggle('mobile')">☰</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> Technology Talent Solutions</div>
+      <h1>Build stronger teams with exceptional IT talent.</h1>
+      <p>Vexandor LLC connects growing organizations with highly qualified technology professionals who can make an immediate impact.</p>
+      <div class="actions"><a href="#contact" class="btn-primary">Find Your Next Hire</a><a href="#services" class="btn-secondary">Explore Services</a></div>
+    </div>
+    <div class="talent-card">
+      <div class="card-top"><span class="card-title">Talent Network</span><span class="status">● Available</span></div>
+      <div class="profile"><div class="avatar">SE</div><div><b>Senior Software Engineer</b><span>Full Stack · Cloud · APIs</span></div><span class="tag">Remote</span></div>
+      <div class="profile"><div class="avatar">DA</div><div><b>Data Engineer</b><span>Python · SQL · Azure</span></div><span class="tag">Contract</span></div>
+      <div class="profile"><div class="avatar">CY</div><div><b>Cybersecurity Engineer</b><span>Security · Compliance · IAM</span></div><span class="tag">Full-Time</span></div>
+      <div class="profile"><div class="avatar">CL</div><div><b>Cloud Engineer</b><span>AWS · Azure · DevOps</span></div><span class="tag">C2C</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-head"><div class="kicker">What we do</div><h2>Flexible staffing built around your technology goals.</h2><p class="lead">From one critical hire to an entire engineering team, we help companies access the specialized talent they need.</p></div>
+    <div class="service-grid">
+      <article class="service"><div class="icon">⌁</div><h3>IT Staffing</h3><p>Connect with skilled technology professionals for critical roles across your organization.</p></article>
+      <article class="service"><div class="icon">↗</div><h3>Contract Staffing</h3><p>Scale your workforce quickly with experienced contract and project-based specialists.</p></article>
+      <article class="service"><div class="icon">◆</div><h3>Direct Hire</h3><p>Identify and secure long-term talent aligned with your culture, technical needs, and growth.</p></article>
+      <article class="service"><div class="icon">◈</div><h3>Technology Recruiting</h3><p>Targeted recruiting for hard-to-fill software, cloud, data, security, and infrastructure roles.</p></article>
+      <article class="service"><div class="icon">+</div><h3>Team Augmentation</h3><p>Add experienced specialists to existing teams without slowing down delivery.</p></article>
+      <article class="service"><div class="icon">◎</div><h3>Talent Advisory</h3><p>Practical workforce guidance to help you plan, source, and retain high-impact technical talent.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="approach">
+  <div class="container split">
+    <div>
+      <div class="kicker">Why Vexandor</div><h2>A staffing partner that understands technology.</h2>
+      <p class="lead">We combine a technology-focused recruiting approach with a commitment to responsive service and long-term relationships.</p>
+      <ul class="check-list">
+        <li><span class="check">✓</span>Technology-focused candidate sourcing</li>
+        <li><span class="check">✓</span>Rigorous qualification and role alignment</li>
+        <li><span class="check">✓</span>Flexible engagement models</li>
+        <li><span class="check">✓</span>Responsive support throughout the hiring process</li>
+      </ul>
+    </div>
+    <div class="metrics">
+      <div class="metric"><strong>01</strong><span>Technology-first recruiting</span></div>
+      <div class="metric"><strong>02</strong><span>Flexible staffing models</span></div>
+      <div class="metric"><strong>03</strong><span>Quality-focused matching</span></div>
+      <div class="metric"><strong>04</strong><span>Long-term partnerships</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Our process</div><h2>Simple, focused, and built for speed.</h2></div>
+    <div class="steps">
+      <article class="step"><div class="number">01 — DISCOVER</div><h3>Understand the role</h3><p>We learn your technical requirements, team environment, timeline, and goals.</p></article>
+      <article class="step"><div class="number">02 — SOURCE</div><h3>Find the right talent</h3><p>We identify qualified professionals from targeted technology talent networks.</p></article>
+      <article class="step"><div class="number">03 — QUALIFY</div><h3>Validate the match</h3><p>We evaluate experience, skills, communication, and alignment with the position.</p></article>
+      <article class="step"><div class="number">04 — DELIVER</div><h3>Support the hire</h3><p>We help move the selected candidate through the process and stay engaged after placement.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="container">
+    <div class="cta-box">
+      <div><div class="kicker" style="color:#9dbdff">Let's connect</div><h2>Ready to strengthen your technology team?</h2><p>Tell us what you're building and the talent you need. Vexandor LLC can help you find the right professionals.</p></div>
+      <a href="mailto:info@vexandor.com" class="btn-primary">Contact Vexandor</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="brand footer-brand"><span class="mark">V</span>Vexandor LLC</div>
+      <div class="footer-links"><a href="#services">Services</a><a href="#approach">About</a><a href="#process">Process</a><a href="#contact">Contact</a></div>
+    </div>
+    <div class="copyright">© 2026 Vexandor LLC. All rights reserved.</div>
+  </div>
+</footer>
+</body>
+</html>
